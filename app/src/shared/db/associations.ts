@@ -1,8 +1,8 @@
 // Centralize all model associations to avoid circular imports
 import { Role } from "../../modules/roles/rol.model";
 import { User } from "../../modules/users/user.model";
-import { Client } from "../../modules/clientss/client.model";
-import { Address } from "../../modules/clientss/address.model";
+import { Client } from "../../modules/clientss/models/client.model";
+import { Address } from "../../modules/clientss/models/address.model";
 import { Warehouse } from "../../modules/warehouses/warehouse.model";
 import { Product } from "../../modules/products/product.model";
 import { WarehouseStock } from "../../modules/warehouses/warehouseStock.model";

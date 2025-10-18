@@ -1,0 +1,123 @@
+erDiagram
+  ROLES ||--o{ USERS : has
+  CLIENTS ||--o{ ADDRESSES : has
+  WAREHOUSES ||--o{ WAREHOUSE_STOCK : stocks
+  PRODUCTS ||--o{ WAREHOUSE_STOCK : stocks
+  ORDER_STATUS ||--o{ ORDERS : has
+  ORDERS ||--o{ ORDER_ITEMS : has
+  ORDERS ||--o{ ORDER_STATUS_HISTORY : has
+  CLIENTS ||--o{ ORDERS : places
+  WAREHOUSES ||--o{ ORDERS : fulfilled_by
+  ORDER_ITEMS }o--|| PRODUCTS : includes
+  USERS ||--o{ ORDER_STATUS_HISTORY : changes
+
+  ROLES {
+    int id
+    string name
+    boolean is_active
+    datetime created_at
+    datetime updated_at
+  }
+
+  USERS {
+    int id
+    string name
+    string email
+    string password_hash
+    int role_id
+    boolean is_active
+    datetime created_at
+    datetime updated_at
+  }
+
+  CLIENTS {
+    int id
+    string cedula
+    string fullname
+    string email
+    string phone
+    boolean is_active
+    datetime created_at
+    datetime updated_at
+  }
+
+  ADDRESSES {
+    int id
+    int client_id
+    string country
+    string department
+    string city
+    string street
+    string number
+    boolean is_default
+    datetime created_at
+    datetime updated_at
+  }
+
+  WAREHOUSES {
+    int id
+    string name
+    boolean is_active
+    datetime created_at
+    datetime updated_at
+  }
+
+  PRODUCTS {
+    int id
+    string code
+    string name
+    string description
+    float price
+    boolean is_active
+    datetime created_at
+    datetime updated_at
+  }
+
+  WAREHOUSE_STOCK {
+    int id
+    int warehouse_id
+    int product_id
+    int quantity
+    datetime created_at
+    datetime updated_at
+  }
+
+  ORDER_STATUS {
+    int id
+    string name
+    string description
+    boolean is_active
+    datetime created_at
+    datetime updated_at
+  }
+
+  ORDERS {
+    int id
+    int client_id
+    int warehouse_id
+    int status_id
+    float total
+    datetime created_at
+    datetime updated_at
+  }
+
+  ORDER_ITEMS {
+    int id
+    int order_id
+    int product_id
+    int quantity
+    float unit_price
+    float subtotal
+    datetime created_at
+    datetime updated_at
+  }
+
+  ORDER_STATUS_HISTORY {
+    int id
+    int order_id
+    int from_status_id
+    int to_status_id
+    int changed_by
+    datetime changed_at
+    string note
+  }

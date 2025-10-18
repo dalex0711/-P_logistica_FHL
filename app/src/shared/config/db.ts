@@ -2,7 +2,7 @@
 import { Sequelize } from "sequelize";
 import { env } from "./env";
 
-// Initialize Sequelize with environment variables
+// Global Sequelize instance with default model definitions
 export const sequelize = new Sequelize(
     env.db.name,
     env.db.user,
@@ -12,17 +12,19 @@ export const sequelize = new Sequelize(
         port: env.db.port,
         dialect: "postgres",
         logging: false, 
-});
+        define: {
+            underscored: true, 
+            timestamps: true,  
+        },
+    }
+);
 
-
-// Simple connection test 
+// Simple connection test
 export const testConnection = async (): Promise<void> => {
     try {
         await sequelize.authenticate();
         console.log("✅ Database connection established successfully.");
     } catch (error) {
-    console.error("❌ Database connection failed:", error);
+        console.error("❌ Database connection failed:", error);
     }
 };
-
-

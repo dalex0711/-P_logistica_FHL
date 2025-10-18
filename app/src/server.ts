@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { env } from "./shared/config/env";
-import { testConnection } from "./shared/config/db";
+import { initDatabase } from "./shared/db";
 
 const app = express();
 app.use(express.json());
@@ -14,8 +14,11 @@ app.get("/health", (_req, res) => {
     res.json({ ok: true, env: env.nodeEnv });
 });
 
-// Test DB connection when app starts
-testConnection();
+// Initialize DB on startup
+initDatabase().catch((err) => {
+    console.error("❌ DB init failed:", err);
+  process.exit(1); // Fail fast if the database is not reachable
+});
 
 app.listen(env.port, () => {
     console.log(`[FHL] API running on port ${env.port}`);

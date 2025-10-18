@@ -1,0 +1,3 @@
+name,email,password,role_name,is_active
+System Admin,admin@fhl.com,Admin#123,admin,true
+Analyst User,analyst@fhl.com,Analyst#123,analyst,true

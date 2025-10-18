@@ -1,0 +1,4 @@
+cedula,fullname,email,phone,is_active,created_at,updated_at
+11223344,Juan Pérez,juan.perez@example.com,3001234567,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z
+22334455,María Gómez,maria.gomez@example.com,3007654321,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00
+662334455,lola Gómez,loca.gomez@example.com,3307654321,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00

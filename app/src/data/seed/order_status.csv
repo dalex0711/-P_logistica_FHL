@@ -1,0 +1,4 @@
+name,description,is_active,created_at,updated_at
+pending,Order created and pending dispatch,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z
+in_transit,Order is on the way,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z
+delivered,Order delivered to customer,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z

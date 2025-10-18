@@ -5,8 +5,8 @@ import { applyAssociations } from "./associations";
 // Register models (side-effect imports)
 import "../../modules/roles/rol.model";
 import "../../modules/users/user.model";
-import "../../modules/clientss/client.model";
-import "../../modules/clientss/address.model";
+import "../../modules/clientss/models/client.model";
+import "../../modules/clientss/models/address.model";
 import "../../modules/warehouses/warehouse.model";
 import "../../modules/products/product.model";
 import "../../modules/warehouses/warehouseStock.model";

@@ -1,0 +1,4 @@
+code,name,description,price,is_active,created_at,updated_at
+SKU-BOX-M,Caja Mediana,Caja corrugada,12500,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z
+SKU-TAPE,Cinta Empaque,Cinta adhesiva 48mm,4990,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z
+SKU-BAG-L,Bolsa Grande,Bolsa plástica,1590,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z

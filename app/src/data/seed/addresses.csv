@@ -1,0 +1,3 @@
+client_id,country,department,city,street,number,is_default,created_at,updated_at
+1,Colombia,Atlántico,Barranquilla,Calle 84,45-23,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z
+2,Colombia,Atlántico,Soledad,Calle 54,33-10,true,2025-01-01T00:00:00Z,2025-01-01T00:00:00Z

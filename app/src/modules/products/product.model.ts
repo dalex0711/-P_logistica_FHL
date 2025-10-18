@@ -10,7 +10,7 @@ export interface ProductAttrs {
     code: string; 
     name: string; 
     description?: string | null; 
-    price: string; 
+    price: number; 
     is_active: boolean; 
     created_at?: Date; 
     updated_at?: Date;
@@ -28,7 +28,7 @@ export class Product extends Model<ProductAttrs, ProductCreation> implements Pro
     public code!: string; 
     public name!: string; 
     public description!: string | null; 
-    public price!: string; 
+    public price!: number; 
     public is_active!: boolean;
     public created_at!: Date; 
     public updated_at!: Date;
